@@ -1,0 +1,54 @@
+{
+    "name": "islam016/arabic-search",
+    "description": "Arabic-aware text normalization and search for PHP and Laravel: find \"أحمد\" when users type \"احمد\", ignore harakat, tatweel, ة/ه, ى/ي and Arabic-Indic digits, in PHP and in SQL (MySQL, PostgreSQL, SQLite).",
+    "keywords": ["arabic", "search", "normalization", "laravel", "eloquent", "mysql", "postgresql", "sqlite", "rtl", "i18n"],
+    "license": "MIT",
+    "type": "library",
+    "homepage": "https://github.com/Islam016/arabic-search",
+    "authors": [
+        {
+            "name": "Islam Gaber",
+            "email": "islamgaber873@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-mbstring": "*"
+    },
+    "require-dev": {
+        "ext-pdo": "*",
+        "illuminate/database": "^12.0",
+        "illuminate/support": "^12.0",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "suggest": {
+        "illuminate/database": "Query builder macros, the HasArabicSearch trait and the backfill command (Laravel 12+)"
+    },
+    "autoload": {
+        "psr-4": {
+            "IslamGaber\\ArabicSearch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IslamGaber\\ArabicSearch\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "IslamGaber\\ArabicSearch\\Laravel\\ArabicSearchServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
